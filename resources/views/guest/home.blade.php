@@ -14,7 +14,7 @@
 
     </head>
     <body>
-            <header>
+{{--             <header>
                 @if (Route::has('login'))
                     <nav class="d-flex justify-content-center align-items-center gap-4 fs-2">
                         @auth
@@ -29,21 +29,21 @@
                         @endauth
                     </nav>
                 @endif
-    
-                    {{--  <div class="content">
+                
+                {{--  <div class="content">
                     @if (Auth::check())
-                        Benvenuto {{ Auth::user()["name"] }}!
+                    Benvenuto {{ Auth::user()["name"] }}!
                     @endif
                     
                     <div class="title m-b-md">
                         <a href="{{route('admin.posts.index')}}">Blog</a>
                     </div>
-    
+                    
                     <div class="links">
-        
+                        
                     </div>
-                    </div> --}}
-            </header>
+                </div>
+            </header> --}}
 
         <div id="root">
             

@@ -4,8 +4,8 @@
         <div class="text-center">
             <h2>{{post.title}}</h2>
             <h4>{{ post.author }}</h4>
-            </div>
         </div>
+    </div>
 </template>
 
 <script>
