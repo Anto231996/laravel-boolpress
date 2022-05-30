@@ -15,7 +15,7 @@
 
 <section class="container pt-5">
     <div class="row justify-content-center">
-        <form class="col-6" action="{{route('admin.posts.store')}}" method="POST">
+        <form class="col-6" action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Inserisci titolo</label>
@@ -31,7 +31,7 @@
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Inserisci immagine</label>
-                <input type="text" name="image_url" id="image_url" class="form-control">
+                <input type="file" name="image_url" id="image_url" class="form-control">
             </div>
             <div>
                 <input class="btn btn-primary text-white" type="submit" value="Invia">

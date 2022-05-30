@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'Guest\HomeController@index')->name('home');
 
 Route::middleware('auth')
 ->namespace('Admin')
@@ -27,4 +26,7 @@ Route::middleware('auth')
     Route::resource('categories', 'CategoryController');
 });
 
-Route::get('/', 'Guest\HomeController@index');
+// rotte gestite da Vue router
+Route::get('{any?}', function () {
+    return view('guest.home');
+})->where('any', '.*');
