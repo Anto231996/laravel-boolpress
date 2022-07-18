@@ -17,14 +17,14 @@ Auth::routes();
 
 
 Route::middleware('auth')
-->namespace('Admin')
-->prefix("admin")
-->name('admin.')
-->group(function(){
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::resource('posts', 'PostController');
-    Route::resource('categories', 'CategoryController');
-});
+    ->namespace('Admin')
+    ->prefix("admin")
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', 'HomeController@index')->name('home');
+        Route::resource('posts', 'PostController');
+        Route::resource('categories', 'CategoryController');
+    });
 
 // rotte gestite da Vue router
 Route::get('{any?}', function () {
